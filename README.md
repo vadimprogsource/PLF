@@ -60,7 +60,7 @@ Customer
 
 CrmDataSet : DataSet
 {
-    Customers(connectionStr)=>DataSet(connectionStr);
+    CrmDataSet(connectionStr)=>DataSet(connectionStr);
 }
 
 {
