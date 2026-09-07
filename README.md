@@ -51,6 +51,17 @@ StringArrayBuilder : ArrayBuilder
     ~StringArrayBuilder()=>~ArrayBuilder();
 }
 
+Customer
+{
+   id;
+   type;
+   name;
+}
+
+Customers : DataSet<Customer>
+{
+    Customers(connectionStr)=>DataSet(connectionStr);
+}
 
 {
        ArrayBuilder builder = StringArrayBuilder();
@@ -58,7 +69,14 @@ StringArrayBuilder : ArrayBuilder
        ~builder();
        array += 10000;
        (item;array.Add(1000)[1..][x=>x>5]) >>item;
+
+
+       customers= Customers("server=127.1.1.1;database=crm");
+
+       [] list = customers[x=>x.type=="org"][..1000]; // select top 1000 * from  customers where type="org"
+       ~customers();
        ~array();
+       ~list();
      
 }
 ```
