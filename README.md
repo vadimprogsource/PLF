@@ -25,7 +25,7 @@ ArrayBuilder
 {
       m_capacity;
 
-     ArrayBuilder(capacity)=>m_capacity = cap;
+     ArrayBuilder(capacity)=>m_capacity = capacity;
 
     Capacity=>m_capacity;
 
