@@ -1,4 +1,12 @@
 ```csharp
+
+ArrayList : List
+{
+    ArrayList(capacity)=>List(capacity);
+    Add(item)=>List::Add(item);
+    ~ArrayList()=>~List();
+}
+
 ArrayBuilder
 {
       m_capacity;
