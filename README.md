@@ -3,7 +3,21 @@
 ArrayList : List
 {
     ArrayList(capacity)=>List(capacity);
-    Add(item)=>List::Add(item);
+    Add(item)
+    {
+      List::Add(item);
+      =>; 
+    }
+    AddRange([] array, fromIndex=0)
+    {
+         (item;array[fromIndex..]) List::Add(item);
+         =>;
+    }
+
+
+    +(item)=>list.Add(item);
+    +([] array)=>list.AddRange(array);
+
     ~ArrayList()=>~List();
 }
 
@@ -15,7 +29,7 @@ ArrayBuilder
 
     Capacity=>m_capacity;
 
-       BuildArray(len)
+       [] BuildArray(len)
        {
                array = [len];
               (i=0;i<len;i++) array[i] = BuildItem(i);
@@ -40,8 +54,10 @@ StringArrayBuilder : ArrayBuilder
 
 {
        ArrayBuilder builder = StringArrayBuilder();
-       array = bulder.BuildArray(100);
-       (item;array[1..]) >>item;
+       array = ArrayList().AddRange( bulder.BuildArray(100));
+       array += 10000;
+       
+       (item;array.Add(1000)[1..]) >>item;
        ~array();
       ~builder();
 }
