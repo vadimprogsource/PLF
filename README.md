@@ -1,10 +1,4 @@
-PL Future
-
-
-
-
-//====================EXAMPLE==============================
-<Code>
+```csharp
 ArrayBuilder
 {
       m_capacity;
@@ -43,4 +37,4 @@ StringArrayBuilder : ArrayBuilder
        ~array();
       ~builder();
 }
-</Code>
+```
