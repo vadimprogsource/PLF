@@ -18,7 +18,7 @@ ArrayBuilder
 
     ~ArrayBulder()
      {
-         ~capacity();
+         ~m_capacity();
      }
 }
 
