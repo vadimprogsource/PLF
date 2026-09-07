@@ -73,7 +73,7 @@ CrmDataSet : DataSet
 
        crm= CrmDataSet("server=127.1.1.1;database=crm");
 
-       [] list = crm<Customer>[x=>x.type=="org"][..1000]; // select top 1000 * from  customers where type="org"
+       [] list = crm<Customer>[x=>x.type=="org" && x.id>0][..1000]; // select top 1000 * from  customers where type="org" and id>0
        ~crm();
        ~array();
        ~list();
