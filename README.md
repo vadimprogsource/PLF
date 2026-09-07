@@ -3,7 +3,7 @@ ArrayBuilder
 {
       m_capacity;
 
-     ArrayBuilder(cap)=>m_capacity = cap;
+     ArrayBuilder(capacity)=>m_capacity = cap;
 
     Capacity=>m_capacity;
 
