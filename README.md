@@ -4,7 +4,7 @@ PL Future
 
 
 //====================EXAMPLE==============================
-
+<Code>
 ArrayBuilder
 {
       m_capacity;
@@ -43,3 +43,4 @@ StringArrayBuilder : ArrayBuilder
        ~array();
       ~builder();
 }
+</Code>
