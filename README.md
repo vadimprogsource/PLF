@@ -54,11 +54,11 @@ StringArrayBuilder : ArrayBuilder
 
 {
        ArrayBuilder builder = StringArrayBuilder();
-       array = ArrayList().AddRange( bulder.BuildArray(100));
+       array = ArrayList().AddRange(builder.BuildArray(100));
+       ~builder();
        array += 10000;
-       
-       (item;array.Add(1000)[1..]) >>item;
+       (item;array.Add(1000)[1..][x=>x>5]) >>item;
        ~array();
-      ~builder();
+     
 }
 ```
